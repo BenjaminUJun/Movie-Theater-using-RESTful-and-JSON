@@ -1,0 +1,16 @@
+
+    <jdbc-connection-pool datasource-classname="com.mysql.jdbc.jdbc2.optional.MysqlDataSource" name="mysql_id26346702_fit5192a1Pool" wrap-jdbc-objects="false" connection-validation-method="auto-commit" res-type="javax.sql.DataSource">
+      <property name="serverName" value="localhost"></property>
+      <property name="portNumber" value="3306"></property>
+      <property name="databaseName" value="id26346702"></property>
+      <property name="User" value="fit5192a1"></property>
+      <property name="Password" value=""></property>
+      <property name="URL" value="jdbc:mysql://localhost:3306/id26346702?zeroDateTimeBehavior=convertToNull"></property>
+      <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
+    </jdbc-connection-pool>
+<jdbc-resource pool-name="mysql_id26346702_fit5192a1Pool" jndi-name="MovieDB"></jdbc-resource>
+
+
+<application-ref ref="MovieDB" virtual-servers="server"></application-ref>
+
+<application-ref ref="MovieClient" virtual-servers="server"></application-ref>
